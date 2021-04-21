@@ -1,0 +1,57 @@
+APIs
+
+--- Application Programming Interface is  part of a computer program designed to be used/manipulated by another program
+
+--- A web API allows information or functionality to be manipulated by other programs via the internet
+
+- Consider an API if: 
+ - Huge dataset
+ - Users accessing data in realtime
+ - Data changes frequently
+ - Users only need to access a part of the data at any one time
+ - Users need to in addition to retrieve data, update it or delete
+ 
+ 
+ --- HTTP, Hyper Text Transfer Protocol is the primary means of communicating data on the web
+ --- URL, Uniform Resource Locater is an address for a resource on the web
+ --- URI, Uniform Resource Identifier is a unique sequence of characters that identifies a logical  or physical resource on the web
+ --- JSON, Javascript Object Notation is a text based data storage format designed to be easy to read for both humans and machines
+ --- XML, Extensible Markup Language is often used as an alternative to JSON
+ --- REST, Representational State Transfer, is a philosophy that describes some best practices for implementing APIs
+ --- APIs consist of a BASR URL example: http://chroniclingamerica.loc.gov, PATH example /search/pages/results/ and query parameters example: ?format=json&proxtext=fire
+
+ --- Design Requests: 
+- Use plural words, dont use request name in the URL or PATH, 
+- Use query parameters o allow filtering data on multiple fields and providing additional data like output formats for example: http://api.example.com/books?author=Ursula+K.+Le Guin&published=1969&output=xml, 
+ - it also important to plan for future additions in the request to allow searching for all resources available, also to allow for future versions with improvements, its prudent to add a version number so that old urls will continue to work after new ones are created for example: https://api.example.com/v1/resources/books?id=10
+ 
+ --- Documentation:
+ 
+ - Document description of resources and functionality with working examples of request urls & code
+ - Have a section for each resource describe fields of the data it accepts, each having  a HTTP request example and code
+ - A fairly common practice in documenting APIs is to provide annotations in your code that are then automatically collated into documentation using a tool such as Doxygen or Sphinx. They create documentation from docstrings in functions definitions
+ - Always imagine yourself as an API user and provide working examples
+ - Have 3 kinds of documentation:
+     - A reference details each route and its behaviour
+     - A guide expressing the reference in prose
+     - One or two tuitorials explaining every step in detail
+     
+ """
+ For inspiration on how to approach API documentation, see the New York Public Library Digital Collections API, which sets a standard of documentation achievable for many academic projects. For an extensively documented (though sometimes overwhelming) API, see the MediaWiki Action API, which provides documentation to users who pass partial queries to the API. (In our example above, we returned an error on a partial query.) For other professionally maintained API documentation examples, consider the World Bank API, the various New York Times APIs, or the Europeana Pro API. """
+ 
+ REST APIs standards
+ 
+ - Client-server architecture -> the client handles the UI and the server handles the backend and data storage. they are indepedent and can be replaced separately
+ 
+ - stateless -> no data from the client is stored on the server-side. The session state/data is stored on the client side
+ 
+ - cacheable -> clients can cache server responses to improve performance
+ 
+ 
+ CRUD
+ - is a programming concept that identifies 4 basic actions (Create, Read, Update and Delete) ie GET, POST, PUT, DELETE
+ 
+ 
+
+ 
+ 
